@@ -1,0 +1,31 @@
+@import "tailwindcss";
+
+html,
+body,
+#root{
+    height:100%;
+    margin:0;
+}
+
+body{
+    background:#f5f7fb;
+    font-family:Inter,Arial,sans-serif;
+}
+/* Scrollbar de la sidebar */
+
+::-webkit-scrollbar {
+    width: 7px;
+}
+
+::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #475569;
+    border-radius: 20px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #64748b;
+}
