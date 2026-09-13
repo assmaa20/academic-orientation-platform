@@ -1,173 +1,118 @@
-# 🎓 Academic Program Classification
+# 🎓 Orientation Filière Maroc (OFM)
 
 ## Overview
 
-Academic Program Classification is a Machine Learning project focused on the preprocessing, enrichment, and classification of Moroccan academic programs (filières).
+Orientation Filière Maroc (OFM) is an AI-powered academic guidance platform designed to help students discover suitable academic programs, universities, and career opportunities.
 
-The objective is to transform raw educational data into a structured and enriched dataset that can be used in recommendation systems, academic orientation platforms, and educational analytics.
-
----
-
-## Objectives
-
-- Explore and analyze educational datasets
-- Clean and preprocess academic program data
-- Handle missing values
-- Generate competencies automatically
-- Generate career opportunities automatically
-- Enrich program descriptions using AI
-- Classify academic programs using Machine Learning
-- Validate and prepare datasets for deployment
+The project combines Machine Learning, Data Processing, and Web Development to provide an intelligent orientation experience.
 
 ---
 
-## Dataset
+## Key Features
 
-The project processes information related to:
+### 🤖 Artificial Intelligence
 
-- Academic programs
-- Universities
-- Disciplines
-- Degrees
-- Competencies
-- Career opportunities
-- Program descriptions
-
-### Dataset Statistics
-
-| Metric | Value |
-|----------|----------|
-| Total Programs | 4451 |
-| Universities | 13 |
-| Features After Encoding | 3517 |
-| Algorithm | Random Forest |
-| Accuracy | 96.86% |
-
----
-
-## Machine Learning Pipeline
-
-### 1. Data Exploration
-
-- Dataset analysis
-- Missing value identification
-- Data quality assessment
-
-### 2. Data Preprocessing
-
-- Data cleaning
-- Duplicate removal
-- Text normalization
-- Missing value treatment
-
-### 3. AI-Based Enrichment
-
+- Data preprocessing and cleaning
+- Missing value handling
+- Academic program enrichment
 - Competency generation
 - Career generation
-- Description generation
-- Knowledge enrichment
+- Academic program classification
+- Dataset validation
 
-### 4. Classification
+### 🌐 Web Application
 
-- Feature engineering
-- One-Hot Encoding
-- Train/Test Split
-- Random Forest Classifier
-
-### 5. Validation
-
-- Performance evaluation
-- Prediction validation
-- Dataset verification
+- User authentication
+- Email verification
+- Google & Microsoft login
+- Profile management
+- Academic program exploration
+- University exploration
+- Career exploration
+- Intelligent chatbot assistant
+- Conversation history
 
 ---
 
-## Technologies
+## Tech Stack
 
-### Programming
+### Backend
 
+- FastAPI
+- SQLAlchemy
+- JWT Authentication
+- OAuth2
 - Python
 
-### Data Processing
+### Frontend
+
+- React
+- Vite
+- Tailwind CSS
+- Axios
+- React Router
+
+### AI & Data Science
 
 - Pandas
 - NumPy
-- OpenPyXL
-
-### Machine Learning
-
 - Scikit-Learn
-- Random Forest
-
-### AI Tools
-
 - Ollama
 - Gemma 3
 
-### Development
+### Database
 
-- Visual Studio Code
-- Git
-- GitHub
+- PostgreSQL
 
 ---
 
-## Project Structure
+## Project Architecture
 
 ```text
-academic-program-classification
-│
-├── scripts
-│   ├── 01_preprocessing
-│   ├── 02_generation_llm
-│   └── 03_tests
-│
-├── data
-│   ├── raw
-│   ├── processed
-│   └── output
-│
-├── images
-│
-├── README.md
-└── requirements.txt
+Frontend (React)
+       ↓
+Backend API (FastAPI)
+       ↓
+Database (PostgreSQL)
+       ↓
+Machine Learning Pipeline
 ```
-
----
-
-## Results
-
-✅ Academic program classification
-
-✅ Automatic competency generation
-
-✅ Automatic career generation
-
-✅ Dataset enrichment
-
-✅ Data preparation for SQL Server integration
-
-✅ Random Forest Accuracy: 96.86%
 
 ---
 
 ## Screenshots
 
-### Dataset Exploration
+### Home Page
 
-(Add screenshot)
+(Add screenshot here)
 
-### Data Cleaning
+### Chatbot
 
-(Add screenshot)
+(Add screenshot here)
 
-### Classification Results
+### Academic Programs
 
-(Add screenshot)
+(Add screenshot here)
 
-### Validation Results
+---
 
-(Add screenshot)
+## Installation
+
+### Backend
+
+```bash
+cd backend
+pip install -r requirements.txt
+uvicorn main:app --reload
+```
+
+### Frontend
+
+```bash
+cd frontend
+npm install
+npm run dev
+```
 
 ---
 
