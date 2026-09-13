@@ -1,115 +1,50 @@
 # 🎓 Orientation Filière Maroc (OFM)
 
-## 📖 Description
+## Overview
 
-**Orientation Filière Maroc (OFM)** est une plateforme web intelligente développée dans le cadre d'un projet académique.
+Orientation Filière Maroc (OFM) is an AI-powered academic guidance platform designed to help students discover suitable academic programs, universities, and career opportunities.
 
-L'objectif de cette application est d'accompagner les étudiants dans leur orientation universitaire en proposant un système intelligent permettant de rechercher des filières, consulter les universités marocaines, découvrir les métiers associés et interagir avec un chatbot spécialisé.
-
-Le projet est composé de deux parties principales :
-
-- **Une partie Intelligence Artificielle** dédiée au nettoyage, au prétraitement et à la classification des données des filières.
-- **Une application Web** développée avec FastAPI et React permettant aux utilisateurs d'interagir avec le système.
+The project combines Machine Learning, Data Processing, and Web Development to provide an intelligent orientation experience.
 
 ---
 
-# 📂 Structure du projet
+## Key Features
 
-```
-OFM_Orientation_Filiere_Maroc
-│
-├── Documentation
-│   ├── Rapport.pdf
-│   └── Presentation.pptx
-│
-├── OFM_AI_Classification_Filiere
-│
-└── OFM_Web_Application
-    ├── backend
-    └── frontend
-```
+### 🤖 Artificial Intelligence
 
----
+- Data preprocessing and cleaning
+- Missing value handling
+- Academic program enrichment
+- Competency generation
+- Career generation
+- Academic program classification
+- Dataset validation
 
-# 🤖 Partie Intelligence Artificielle
+### 🌐 Web Application
 
-La partie IA comprend toutes les étapes de préparation et de traitement des données.
-
-## Fonctionnalités
-
-- Exploration des données
-- Nettoyage des données
-- Traitement des valeurs manquantes
-- Génération automatique des compétences
-- Génération automatique du marché du travail
-- Prétraitement des données
-- Classification des filières
-- Validation des résultats
-- Génération des jeux de données finaux
+- User authentication
+- Email verification
+- Google & Microsoft login
+- Profile management
+- Academic program exploration
+- University exploration
+- Career exploration
+- Intelligent chatbot assistant
+- Conversation history
 
 ---
 
-## Technologies utilisées
+## Tech Stack
 
-- Python
-- Pandas
-- NumPy
-- Scikit-learn
-- Ollama
-- Gemma 3
-- OpenPyXL
-
----
-
-# 🌐 Partie Web
-
-L'application Web permet aux utilisateurs d'utiliser les données générées par la partie IA.
-
-## Fonctionnalités
-
-### Authentification
-
-- Création de compte
-- Vérification par e-mail
-- Connexion
-- Déconnexion
-- Connexion Google
-- Connexion Microsoft
-
-### Gestion du profil
-
-- Consultation du profil
-- Modification des informations personnelles
-- Modification du mot de passe
-
-### Chatbot
-
-- Conversation intelligente
-- Historique des conversations
-- Réponses basées sur les données des filières
-
-### Orientation
-
-- Consultation des filières
-- Consultation des universités
-- Consultation des métiers
-- Tableau de bord utilisateur
-
----
-
-# 🛠 Technologies utilisées
-
-## Backend
+### Backend
 
 - FastAPI
 - SQLAlchemy
-- PostgreSQL
-- JWT
+- JWT Authentication
 - OAuth2
-- Passlib
 - Python
 
-## Frontend
+### Frontend
 
 - React
 - Vite
@@ -117,189 +52,80 @@ L'application Web permet aux utilisateurs d'utiliser les données générées pa
 - Axios
 - React Router
 
-## Base de données
+### AI & Data Science
+
+- Pandas
+- NumPy
+- Scikit-Learn
+- Ollama
+- Gemma 3
+
+### Database
 
 - PostgreSQL
 
 ---
 
-# ⚙ Installation
+## Project Architecture
 
-## 1. Cloner le projet
-
-```bash
-git clone <repository_url>
+```text
+Frontend (React)
+       ↓
+Backend API (FastAPI)
+       ↓
+Database (PostgreSQL)
+       ↓
+Machine Learning Pipeline
 ```
-
-ou télécharger le projet au format ZIP.
 
 ---
 
-# Backend
+## Screenshots
 
-Se placer dans le dossier :
+### Home Page
 
-```bash
-cd OFM_Web_Application/backend
-```
+(Add screenshot here)
 
-Créer un environnement virtuel :
+### Chatbot
 
-```bash
-python -m venv venv
-```
+(Add screenshot here)
 
-Activer l'environnement virtuel.
+### Academic Programs
 
-### Windows
+(Add screenshot here)
 
-```bash
-venv\Scripts\activate
-```
+---
 
-### Linux / macOS
+## Installation
+
+### Backend
 
 ```bash
-source venv/bin/activate
-```
-
-Installer les dépendances :
-
-```bash
+cd backend
 pip install -r requirements.txt
-```
-
-Créer le fichier `.env` :
-
-```env
-DATABASE_URL=...
-
-SECRET_KEY=...
-
-ALGORITHM=HS256
-
-ACCESS_TOKEN_EXPIRE_MINUTES=60
-
-GMAIL_EMAIL=...
-
-GMAIL_APP_PASSWORD=...
-
-FRONTEND_URL=http://localhost:5173
-```
-
-Lancer le backend :
-
-```bash
 uvicorn main:app --reload
 ```
 
-Le serveur sera disponible sur :
-
-```
-http://localhost:8000
-```
-
-Documentation Swagger :
-
-```
-http://localhost:8000/docs
-```
-
----
-
-# Frontend
-
-Se placer dans :
+### Frontend
 
 ```bash
-cd OFM_Web_Application/frontend
-```
-
-Installer les dépendances :
-
-```bash
+cd frontend
 npm install
-```
-
-Lancer l'application :
-
-```bash
 npm run dev
 ```
 
-Le frontend sera disponible sur :
-
-```
-http://localhost:5173
-```
-
 ---
 
-# Base de données
-
-Créer une base PostgreSQL puis configurer la variable :
-
-```env
-DATABASE_URL
-```
-
-Exemple :
-
-```env
-DATABASE_URL=postgresql://postgres:password@localhost/ofm
-```
-
----
-
-# Authentification
-
-L'application utilise :
-
-- JWT
-- OAuth2
-- Vérification par e-mail
-- Chiffrement des mots de passe avec BCrypt
-
----
-
-# Fonctionnement
-
-Le processus global est le suivant :
-
-1. Préparation des données.
-2. Nettoyage des données.
-3. Classification des filières.
-4. Import des données dans la base.
-5. Consultation via l'application Web.
-6. Interaction avec le chatbot.
-
----
-
-# Captures d'écran
-
-Vous pouvez ajouter ici des captures d'écran de :
-
-- Page d'accueil
-- Connexion
-- Dashboard
-- Chatbot
-- Profil
-- Filières
-- Universités
-- Métiers
-
----
-
-# Auteur
+## Author
 
 **Assmaa Chafi**
 
-Étudiante en Génie Informatique – Big Data & Intelligence Artificielle
+Big Data & Artificial Intelligence Engineering Student
 
 Université Internationale de Rabat (UIR)
 
 ---
 
-# Licence
+## Academic Context
 
-Projet académique développé dans le cadre d'un projet universitaire.
+This project was developed as part of an engineering project in Big Data and Artificial Intelligence.
